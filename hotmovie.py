@@ -27,7 +27,7 @@ for name in tag_name:
             'page_start': page
         }
 
-        movie_info = requests.get(movie_url, params=params)#配置参数
+        movie_info = requests.get(movie_url, params=params)#配置参数.
         movie_info = json.loads(movie_info.text)['subjects']
         movie_list = movie_list + movie_info
         page = page + page_limit
